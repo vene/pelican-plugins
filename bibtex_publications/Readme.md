@@ -25,7 +25,7 @@ How to Use
 This plugin reads a user-specified BibTeX file and populates the context with
 a list of publications, ready to be used in your Jinja2 template.
 
-Configuration is simply:
+Configuration simply consists of:
 
 ```python
 PUBLICATIONS_SRC = 'content/pubs.bib'
@@ -43,6 +43,7 @@ variable in all templates.  It is a list of tuples with the following fields:
 available to people who want to cite your work.
 4. `pdf`, `slides`, `poster`: in your BibTeX file, you can add these special fields,
 for example:
+
 ```
 @article{
    foo13
@@ -59,10 +60,10 @@ fields are stripped from the generated BibTeX (found in the `bibtex` field).
 Template Example
 ================
 
-You probably want to define a 'publications.html' direct template.  Don't forget
-to add it to the `DIRECT\_TEMPLATES` configuration key.
+You probably want to define a `publications.html` direct template.  Don't forget
+to add it to the `DIRECT_TEMPLATES` configuration key.
 
-```python
+```html
 {% extends "base.html" %}
 {% block title %}Publications{% endblock %}
 {% block content %}
